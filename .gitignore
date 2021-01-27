@@ -1,2 +1,5 @@
 # Project exclude paths
 /venv/
+/.idea/
+assistant_log.log
+pywhatkit_dbs.txt
