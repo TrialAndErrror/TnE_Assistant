@@ -1,4 +1,3 @@
-# Tutorial from Programming Hero: https://www.youtube.com/watch?v=AWvsXxDtEkU&t=1267s
 from src.Assistant import listen_for_commands, speak
 from src.Tools.search import search_web_for
 from src import SEARCH_COMMANDS
