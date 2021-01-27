@@ -15,7 +15,6 @@ def check_for_wiki_commands(phrase: str):
 
             phrase = process_wiki_phrase(command, phrase)
 
-            # TODO: Fix this order so the page loads while it reads
             print(f'Seaching Wikipedia for {phrase}')
             engine.say(f'Here\'s what I found on Wikipedia for {phrase}:')
             open_wiki_url(phrase)
