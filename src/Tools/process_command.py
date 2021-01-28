@@ -1,3 +1,4 @@
+import logging
 
 
 def cut_trigger_from_command(trigger, command):
@@ -12,21 +13,29 @@ def cut_trigger_from_command(trigger, command):
     :param command: str
     :return: str
     """
-    return command.split(f' {trigger} ')[1].lower()
+    command_action = command.split(f' {trigger} ')[1].lower()
+
+    logging.debug(f'Trigger command ({trigger}) removed from ({command})')
+    logging.debug(f'Returning {command_action} as command_action')
+
+    return command_action
 
 
-def get_first_word_from(command_action):
+def get_first_word_and_phrase_from(command_action):
     """
-    Split command action on spaces;
-    sets trigger word to first word in list;
-    removes trigger word from command action and sets as phrase.
+    Split command action on first space;
+    assigns first section to phrase and rest to command
 
     :param command_action: str
-    :return: phrase: str; trigger_word: str
+    :return: (phrase: str, command: str)
     """
-    trigger_word = command_action.split(' ')[0]
-    phrase = command_action.replace(f'{trigger_word} ', '')
-    return phrase, trigger_word
+    first_word, phrase = command_action.split(' ', 1)[0], command_action.split(' ', 1)[1]
+    phrase = remove_helper_words(phrase)
+
+    logging.debug(f'Removing ({first_word}) from ({command_action})')
+    logging.debug(f'Returning ({first_word}), ({phrase}) as first_word, phrase')
+
+    return first_word, phrase
 
 
 def remove_helper_words(phrase: str):
@@ -38,9 +47,13 @@ def remove_helper_words(phrase: str):
     :param phrase: str
     :return: phrase: str
     """
-
+    logging.debug(f'Removing helper words and whitespace from ({phrase})')
     phrase = phrase.strip()
     phrase = phrase[4:] if phrase[:4] == 'for ' else phrase
     phrase = phrase[3:] if phrase[:3] == 'up ' else phrase
     phrase = phrase.strip()
+    logging.debug(f'Removal complete. Returning phrase as ({phrase})')
+
     return phrase
+
+
