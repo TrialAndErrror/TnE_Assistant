@@ -1,6 +1,6 @@
 import wikipedia
 from urllib.parse import quote
-from src.Tools.process_command import remove_for_from
+from src.Tools.process_command import remove_helper_words
 from src import engine
 import webbrowser
 
@@ -41,5 +41,5 @@ def read_wiki_summary(phrase):
 
 def process_wiki_phrase(command, phrase):
     phrase = phrase.replace(f'{command}', '')
-    phrase = remove_for_from(phrase)
+    phrase = remove_helper_words(phrase)
     return phrase

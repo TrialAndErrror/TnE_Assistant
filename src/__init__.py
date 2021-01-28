@@ -1,5 +1,6 @@
 import speech_recognition as sr
 import pyttsx3
+import logging
 
 SEARCH_COMMANDS = [
     'what',
@@ -9,6 +10,8 @@ SEARCH_COMMANDS = [
     'search',
     'who'
 ]
+
+logging.se
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
