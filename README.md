@@ -72,3 +72,18 @@ is always listening to me, and I'd much rather have one where I can press a butt
 There are simple workarounds to make this Assistant work as an always-on listening device, we here at Trial and Errror
 value your privacy and security and will gladly sacrifice small measures of functionality for large returns in terms of 
 privacy, security, and peace of mind.
+
+#Help! It doesn't work!
+So you downloaded the repository and ran main.py using python3, and it didn't work. Either it flashes on screen,
+or it just doesn't show up. That's OK! The joy of open source software is that we can work together on this.
+
+### What should I do?
+First, let's make sure that python is able to access all of the libraries and files that it needs.
+Start by installing from the requirements.txt (pip3 install -r requirements.txt) and make sure all of those installations
+went smoothly.
+
+If you are having trouble with espeak, it can also be helpful to install espeak through your package manager or
+from the [PyPI page](https://pypi.org/project/python-espeak/) for python espeak.
+
+If that doesn't work, feel free to reach out to me directly and we can try and work through the issue! If you share
+the issue with me, I can update this readme with more helpful instructions to help solve further issues
