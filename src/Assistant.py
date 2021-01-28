@@ -22,7 +22,6 @@ def run_assistant():
     :return: None
     """
     command = listen_for_commands().lower()
-    print_custom_intro()
 
     """
     set_trigger_command is a function in the user file which allows you to set a keyword to trigger the assistant.

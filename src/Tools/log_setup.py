@@ -1,5 +1,5 @@
 import logging
-
+import os
 from src.Assistant import run_assistant
 from src.Settings import DEBUG_LOGGING_ENABLED
 
@@ -17,7 +17,7 @@ def run_assistant_with_logging():
 
     :return: None
     """
-
+    setup_log_dir()
     set_logging_level()
     logging.info('Assistant Started ---------------------------------------')
 
@@ -48,3 +48,15 @@ def set_logging_level():
             level=logging.WARNING,
             format='%(levelname)s:%(asctime)s:%(message)s'
         )
+
+
+def setup_log_dir():
+    """
+    Get log path based on current working directory;
+    make directory if it does not exist.
+
+    :return: None
+    """
+    log_path = os.path.join(os.getcwd(), 'logs')
+    if not os.path.exists(log_path):
+        os.mkdir(log_path)

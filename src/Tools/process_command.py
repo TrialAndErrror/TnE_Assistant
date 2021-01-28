@@ -1,5 +1,6 @@
 import logging
 import speech_recognition as sr
+from src.Settings import print_custom_intro
 
 from src import listener
 
@@ -69,6 +70,7 @@ def listen_for_commands():
     :return: command: str
     """
     with sr.Microphone() as source:
+        print_custom_intro()
         voice = listener.listen(source)
         command: str = listener.recognize_google(voice)
         return command

@@ -16,6 +16,3 @@ if __name__ == '__main__':
     """
     run_assistant_with_logging()
 
-
-
-

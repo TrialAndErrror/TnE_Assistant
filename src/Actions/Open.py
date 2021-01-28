@@ -1,7 +1,7 @@
 import webbrowser
 
 from src import speak
-from src.Settings import set_mail_url
+from src.Settings import ASSISTANT_SETTINGS
 
 
 def open_page_or_file(phrase):
@@ -23,5 +23,12 @@ def open_page_or_file(phrase):
 
 
 def open_mail_link():
-    mail_url = set_mail_url()
+    """
+    Get mail url from Settings file, then open in web browser.
+
+    Defaults to GMail if nothing provided in settings.
+    :return: None
+    """
+    default_url = 'https://mail.google.com/mail/u/0/'
+    mail_url = ASSISTANT_SETTINGS.get('Mail URL', default_url)
     webbrowser.open(mail_url)
