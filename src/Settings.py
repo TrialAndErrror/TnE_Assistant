@@ -1,3 +1,5 @@
+DEBUG_LOGGING_ENABLED = True
+
 WIKI_SETTINGS = {
     'Commands':
         [
@@ -6,11 +8,8 @@ WIKI_SETTINGS = {
             'wiki',
             'wikipedia'
         ],
-    'Lines to Read': 1,
-
-
+    'Lines to Read': 1
 }
-
 SEARCH_COMMANDS = [
     'look',
     'lookup',
@@ -18,7 +17,6 @@ SEARCH_COMMANDS = [
     'search',
     'google'
 ]
-
 ASSISTANT_SETTINGS = {
     'Wake Word': None
 }

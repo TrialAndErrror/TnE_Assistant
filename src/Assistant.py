@@ -1,7 +1,7 @@
-import logging
 
 import speech_recognition as sr
 import subprocess
+import logging
 
 from src import listener
 from src.Actions.Open import open_page_or_file
@@ -12,6 +12,7 @@ from src.Settings import print_custom_intro, WIKI_SETTINGS, SEARCH_COMMANDS
 from src.Tools.process_command import get_first_word_and_phrase_from
 from src.Tools.wake_triggers import check_for_trigger_command, set_trigger_command
 from src.Actions.Catchall import do_catchall_action
+from src.Settings import DEBUG_LOGGING_ENABLED
 
 
 def listen_for_commands():
@@ -132,3 +133,43 @@ def perform_action(command_action):
         """
 
         do_catchall_action(phrase, first_word)
+
+
+def run_assistant_with_logging():
+    """
+    Setup logging based on DEBUG_LOGGING_ENABLED in Settings.
+
+    Write start and stop lines in logs for ease of reading.
+
+    Runs assistant in try block with error logging if it crashes.
+
+    If you manually stop the process, you'll likely trigger an exception here;
+    those can be ignored if they are user-created.
+
+    :return: None
+    """
+
+    if DEBUG_LOGGING_ENABLED:
+        logging.basicConfig(
+            filename='logs/assistant_debug_log.log',
+            level=logging.DEBUG,
+            format='%(levelname)s:%(asctime)s:%(message)s'
+        )
+    else:
+        logging.basicConfig(
+            filename='logs/assistant_error_log.log',
+            level=logging.WARNING,
+            format='%(levelname)s:%(asctime)s:%(message)s'
+        )
+
+    """
+    With logging set up, let's run the assistant in a try block.
+    """
+
+    logging.info('Assistant Started ---------------------------------------')
+    try:
+        run_assistant()
+        logging.info('Assistant Stopped ---------------------------------------')
+    except Exception as e:
+        logging.error(f'Fatal Error reading from microphone {e}')
+        logging.warning('Assistant Crashed ---------------------------------------')
