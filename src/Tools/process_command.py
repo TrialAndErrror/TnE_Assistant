@@ -44,18 +44,22 @@ def get_first_word_and_phrase_from(command_action):
 
 def remove_helper_words(phrase: str):
     """
-    Remove 'for', 'to', and 'up' from the beginning of param phrase.
+    Remove helper words from the beginning of param phrase.
     Removes whitespace before and after removing words.
 
     Returns cleaned phrase.
+
+    This is a part that could use some improvement or a new library integration.
+
     :param phrase: str
     :return: phrase: str
     """
     logging.debug(f'Removing helper words and whitespace from ({phrase})')
     phrase = phrase.strip()
-    phrase = phrase[4:] if phrase[:4] == 'for ' else phrase
-    phrase = phrase[3:] if phrase[:3] == 'up ' else phrase
-    phrase = phrase[3:] if phrase[:3] == 'to ' else phrase
+
+    for word in ['for ', 'was ', 'were ', 'up ', 'to ', 'is ', 'are', 'the ']:
+        phrase = phrase.replace(word, '', 1) if phrase.startswith(word) else phrase
+
     phrase = phrase.strip()
     logging.debug(f'Removal complete. Returning phrase as ({phrase})')
 

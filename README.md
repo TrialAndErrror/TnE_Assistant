@@ -26,17 +26,22 @@ These commands will bring up a video for you to watch on YouTube in your web bro
 * "visit madrid in the springtime"
 * "listen to famous american speeches"
   
-### Play on Youtube
-Any of the following commands will bring up a video for you to watch on YouTube in your web browser.
+### Search on Google
+These commands will search Google for the information you requested.
+* "look up flights to Antarctica"
+* "find blue suede shoes"
+* "search best pizza place in kentucky"
+* "google how to repair a cracked screen"
+* "find where Albert Einstein went to college"
 
-* Examples:
-  * "play classical music"
-  * "see 7 wonders of the world"
-  * "hear bluejays calling"
-  * "watch basketball highlights"
-  * "visit madrid in the springtime"
-  * "listen to famous american speeches"
 
+### Search on Wikipedia
+These commands will search Wikipedia for the person, place, or thing you want to learn more about. Great for 20 questions!
+* "what is Prussia"
+* "who was Napoleon"
+* "wikipedia Nudibranch"
+* "who are the Beatles"
+* "find where Albert Einstein went to college"
 
 ## Shortcut
 
