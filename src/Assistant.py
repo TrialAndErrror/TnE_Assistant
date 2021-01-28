@@ -7,7 +7,7 @@ from src import listener
 from src.Actions.Open import open_page_or_file
 from src.Actions.Play import play_youtube_video_for
 from src.Actions.Search import search_web_for
-from src.Actions.Wiki import search_wiki_for
+from src.Actions.Wiki import open_wiki_results_for
 from src.Settings import print_custom_intro, WIKI_SETTINGS, SEARCH_COMMANDS
 from src.Tools.process_command import get_first_word_and_phrase_from
 from src.Tools.wake_triggers import check_for_trigger_command, set_trigger_command
@@ -101,7 +101,7 @@ def perform_action(command_action):
         """
 
         logging.debug(f'Recognized {first_word} as Wiki; searching Wiki for {phrase}')
-        search_wiki_for(phrase)
+        open_wiki_results_for(phrase)
 
     elif first_word in SEARCH_COMMANDS:
 
