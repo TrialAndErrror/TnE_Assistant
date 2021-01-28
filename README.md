@@ -12,9 +12,10 @@ Thank you to the following people for helping make this project possible:
 
 ## Usage
 
-Run 'main.py' to start the Assistant. Assistant will automatically start listening for a command.
+Run 'main.py' using python3 to start the Assistant. 
+Assistant will automatically start listening for a command.
 
-Commands Currently Supported:
+## Commands Currently Supported:
 
 ### Play on Youtube
 These commands will bring up a video for you to watch on YouTube in your web browser.
@@ -41,8 +42,33 @@ These commands will search Wikipedia for the person, place, or thing you want to
 * "who was Napoleon"
 * "wikipedia Nudibranch"
 * "who are the Beatles"
-* "find where Albert Einstein went to college"
 
-## Shortcut
+### Open File
+This section is currently under development. Eventually, it will have filesystem integrations and more.
+For now, you can use it to open your web browser to your e-mail to quickly check for new messages.
+* "open mail"
+* "send mail"
+* "open messages"
+* "send e-mail"
 
-Included in src/bash/ is a file called 'assistant.sh', which can be run in a bash terminal to start the assistant directly. I included this file for convenience so that you can reference an easy way to run the script or map it to a keyboard shortcut. If you wish to use this, replace the directories included with the python and file directories on your system.
+
+## Customization
+Assistant was built around making your life easier and simplifying common tasks. In order to achieve that goal,
+the Settings.py file in src can be modified to your liking. You will see lists of commands for each of the actions
+listed above, as well as some other miscellaneous settings. Feel free to modify the settings in that file with your
+own preferred wake words or keywords. Additionally, by default, the Assistant is setup to try and run your commands
+even when a wake word is not detected. This functionality can be disabled in the Settings file.
+
+
+### Shortcut
+Along the lines of customization, there is a template bash file called 'assistant.sh' included in src/bash/.
+This script can be run in a bash terminal to start the assistant directly, 
+as long as the user enters the absolute filepath to the script. I included this template because it's a quick way
+to integrate with keyboard shortcuts and allow you to quickly bring up Assistant.
+
+NOTE: By default, the Assistant script must be run every time you want to make a new request.
+There is no "always-on" functionality on Assistant. I chose this because I personally do not need a device that
+is always listening to me, and I'd much rather have one where I can press a button and tell it to listen.
+There are simple workarounds to make this Assistant work as an always-on listening device, we here at Trial and Errror
+value your privacy and security and will gladly sacrifice small measures of functionality for large returns in terms of 
+privacy, security, and peace of mind.
