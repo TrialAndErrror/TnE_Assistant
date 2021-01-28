@@ -1,4 +1,5 @@
 #!/bin/sh
 
-bash -c "pip3 install -r /home/wade/PycharmProjects/TnE_Assistant/src/bash/requirements.txt"
+# Replace /path/to/TnE_Assistant with the absolute path to the TnE_Assistant folder
+bash -c "pip3 install -r /path/to/TnE_Assistant/requirements.txt"
 
