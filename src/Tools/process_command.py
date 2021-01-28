@@ -1,4 +1,7 @@
 import logging
+import speech_recognition as sr
+
+from src import listener
 
 
 def cut_trigger_from_command(trigger, command):
@@ -30,9 +33,9 @@ def get_first_word_and_phrase_from(command_action):
     :return: (phrase: str, command: str)
     """
     first_word, phrase = command_action.split(' ', 1)[0], command_action.split(' ', 1)[1]
-    phrase = remove_helper_words(phrase)
-
     logging.debug(f'Removing ({first_word}) from ({command_action})')
+
+    phrase = remove_helper_words(phrase)
     logging.debug(f'Returning ({first_word}), ({phrase}) as first_word, phrase')
 
     return first_word, phrase
@@ -57,3 +60,15 @@ def remove_helper_words(phrase: str):
     return phrase
 
 
+def listen_for_commands():
+    """
+    Listen for command;
+    use Google speech detection to extract command;
+    then return command
+
+    :return: command: str
+    """
+    with sr.Microphone() as source:
+        voice = listener.listen(source)
+        command: str = listener.recognize_google(voice)
+        return command

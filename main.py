@@ -1,4 +1,4 @@
-from src.Assistant import run_assistant_with_logging
+from src.Tools.log_setup import run_assistant_with_logging
 
 if __name__ == '__main__':
     """

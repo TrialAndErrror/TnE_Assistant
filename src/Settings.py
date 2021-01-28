@@ -1,3 +1,5 @@
+import subprocess
+
 DEBUG_LOGGING_ENABLED = True
 
 WIKI_SETTINGS = {
@@ -18,16 +20,19 @@ SEARCH_COMMANDS = [
     'google'
 ]
 ASSISTANT_SETTINGS = {
-    'Wake Word': None
+    'Wake Word': 'Assistant',
+    'Mail URL': 'https://mail.google.com/mail/u/0/'
 }
 
 
-def set_mail_url():
-    mail_url = 'https://mail.google.com/mail/u/0/'
-    return mail_url
-
-
 def print_custom_intro():
+    """
+    Clear Screen and display introductory text.
+    :return: None
+    """
+
+    subprocess.call('clear', shell=True)
+
     print('Welcome to Ratty\'s Assistant\n'
           '\n'
           '\n'

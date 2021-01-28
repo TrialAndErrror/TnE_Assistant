@@ -1,8 +1,6 @@
 import logging
 
-from src.Assistant import perform_action
 from src.Settings import ASSISTANT_SETTINGS
-from src.Tools.process_command import cut_trigger_from_command
 
 
 def check_for_trigger_command(trigger: str, command: str):
@@ -14,25 +12,24 @@ def check_for_trigger_command(trigger: str, command: str):
     :return: is_triggered: bool
     """
 
-    logging.debug(f'Searching for trigger word ({trigger}) in command action ({command})')
-    is_triggered = bool(trigger.lower().startswith(command.lower()))
-
-    if is_triggered:
-        command_action = cut_trigger_from_command(trigger, command)
-        perform_action(command_action)
-    return is_triggered
+    logging.debug(f'Searching for trigger word ({trigger}) in command ({command})')
+    trigger_test = bool(trigger.lower().startswith(command.lower()))
+    if trigger_test:
+        logging.debug(f'Assistant triggered by trigger word.')
+    else:
+        logging.info(f'Assistant not triggered by trigger word.')
+    return trigger_test
 
 
 def set_trigger_command():
     """
     Checks for default wake word in Settings.py.
+    By default, the wake word is listed as 'Assistant'
 
-    If not found, returns None.
-
-    If found, returns trigger_command as lowercase string.
+    Returns trigger_command as lowercase string.
 
     :return: trigger_command: str
     """
-    trigger_command = ASSISTANT_SETTINGS.get('Wake Word', None)
-    if trigger_command:
-        return trigger_command.lower()
+    trigger_command = ASSISTANT_SETTINGS.get('Wake Word', 'Assistant')
+    return trigger_command.lower()
+

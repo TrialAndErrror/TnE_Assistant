@@ -30,14 +30,14 @@ def read_wiki_summary(phrase, lines_to_read):
 
 def open_wiki_results_for(phrase):
     """
-    Confirm search action;
-    search content related to param phrase on Google using PyWhatKit.
+    Open Wiki URL for phrase;
+    Read Wiki summary aloud based on number of lines specified in Settings.
 
     :param phrase: str
     :return: None
     """
     open_wiki_url(phrase)
 
-    lines_to_read = WIKI_SETTINGS['Lines to Read']
+    lines_to_read: int = WIKI_SETTINGS.get('Lines to Read', 1)
     read_wiki_summary(phrase, lines_to_read)
 

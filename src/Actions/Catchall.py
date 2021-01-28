@@ -19,7 +19,7 @@ def do_catchall_action(phrase, trigger_word):
 
     """
     Below is the catchall action to do when the command is not recognized.
-    By default, it is set to search the web for the phrase included
+    By default, it is set to search the web for the phrase.
     """
     speak(f'I\'ll try to search Google for {phrase}.')
     search_web_for(phrase)
