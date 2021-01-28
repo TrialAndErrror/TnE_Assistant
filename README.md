@@ -73,7 +73,7 @@ There are simple workarounds to make this Assistant work as an always-on listeni
 value your privacy and security and will gladly sacrifice small measures of functionality for large returns in terms of 
 privacy, security, and peace of mind.
 
-#Help! It doesn't work!
+# Help! It doesn't work!
 So you downloaded the repository and ran main.py using python3, and it didn't work. Either it flashes on screen,
 or it just doesn't show up. That's OK! The joy of open source software is that we can work together on this.
 
