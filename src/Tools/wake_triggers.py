@@ -3,22 +3,22 @@ import logging
 from src.Settings import ASSISTANT_SETTINGS
 
 
-def check_for_trigger_command(trigger: str, command: str):
+def check_for_wake_word(wake_word: str, command: str):
     """
     Check if param trigger is in param command.
 
-    :param trigger: str
+    :param wake_word: str
     :param command: str
     :return: is_triggered: bool
     """
 
-    logging.debug(f'Searching for trigger word ({trigger}) in command ({command})')
-    trigger_test = bool(trigger.lower().startswith(command.lower()))
-    if trigger_test:
-        logging.debug(f'Assistant triggered by trigger word.')
+    logging.debug(f'Searching for wake word ({wake_word}) in command ({command})')
+    wake_word_found = bool(wake_word.lower().startswith(command.lower()))
+    if wake_word_found:
+        logging.debug(f'Assistant activated by wake word.')
     else:
-        logging.info(f'Assistant not triggered by trigger word.')
-    return trigger_test
+        logging.info(f'Assistant not activated by wake word.')
+    return wake_word_found
 
 
 def set_trigger_command():
@@ -30,6 +30,6 @@ def set_trigger_command():
 
     :return: trigger_command: str
     """
-    trigger_command = ASSISTANT_SETTINGS.get('Wake Word', 'Assistant')
+    trigger_command = ASSISTANT_SETTINGS.get('Wake Word', 'assistant')
     return trigger_command.lower()
 

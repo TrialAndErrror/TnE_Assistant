@@ -5,7 +5,7 @@ from src import listener
 from src.Settings import print_custom_intro
 
 
-def cut_trigger_from_command(trigger, command):
+def cut_wake_word_from_command(trigger, command):
     """
     Removes trigger from command using string split on the command string.
 
@@ -44,7 +44,7 @@ def get_first_word_and_phrase_from(command_action):
 
 def remove_helper_words(phrase: str):
     """
-    Remove 'for' and 'up' from the beginning of param phrase.
+    Remove 'for', 'to', and 'up' from the beginning of param phrase.
     Removes whitespace before and after removing words.
 
     Returns cleaned phrase.
@@ -55,6 +55,7 @@ def remove_helper_words(phrase: str):
     phrase = phrase.strip()
     phrase = phrase[4:] if phrase[:4] == 'for ' else phrase
     phrase = phrase[3:] if phrase[:3] == 'up ' else phrase
+    phrase = phrase[3:] if phrase[:3] == 'to ' else phrase
     phrase = phrase.strip()
     logging.debug(f'Removal complete. Returning phrase as ({phrase})')
 

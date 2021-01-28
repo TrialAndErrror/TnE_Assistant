@@ -1,24 +1,42 @@
 # Trial and Errror Assistant
 
-Trial and Errror Assistant is a digital assistant that can help with accessing quick information on the internet.
+Trial and Errror Assistant is a voice-activated interface that allows you to quickly and efficiently access the information and media across the web.
 
 ## Special Thanks
 
-Special Thanks to the following people:
-* [RajMa](https://pypi.org/user/RajMa/), creator of [PyWhatKit](https://pypi.org/project/pywhatkit/), which makes most of this project possible;
-* [Natesh M. Bhat](https://pypi.org/user/nateshmbhat/), creator of [Python Text to Speech 3](https://pypi.org/project/pyttsx3/), which enables the Assistant to read text aloud;
-* [Anthony Zhang](https://pypi.org/user/Anthony.Zhang/), creator of [SpeechRecognition](https://pypi.org/project/SpeechRecognition/), which helps Assistant to recognize the commands you give it;
-* and [Programming Hero](https://www.youtube.com/channel/UCStj-ORBZ7TGK1FwtGAUgbQ), for the wonderful [video tutorial](https://www.youtube.com/watch?v=AWvsXxDtEkU) on how to make the underlying libraries work together.
+Thank you to the following people for helping make this project possible:
+* [RajMa](https://pypi.org/user/RajMa/), creator of [PyWhatKit](https://pypi.org/project/pywhatkit/), for providing multiple tools that help enable the Assistant's actions;
+* [Natesh M. Bhat](https://pypi.org/user/nateshmbhat/), creator of [Python Text to Speech 3](https://pypi.org/project/pyttsx3/), for providing a simple and clean text-to-speech tool;
+* [Anthony Zhang](https://pypi.org/user/Anthony.Zhang/), creator of [SpeechRecognition](https://pypi.org/project/SpeechRecognition/), for providing an easy to use voice recognition tool;
+* and [Programming Hero](https://www.youtube.com/channel/UCStj-ORBZ7TGK1FwtGAUgbQ), for the comprehensive and entertaining [video tutorial](https://www.youtube.com/watch?v=AWvsXxDtEkU) on how to make the underlying libraries work together. If you're interested in this Assistant and how to develop your own, I highly recommend starting with his video to get a great overview of the process!
 
 ## Usage
 
-Run 'main.py' and follow the prompts in the console to make a request to the Assistant.
+Run 'main.py' to start the Assistant. Assistant will automatically start listening for a command.
 
-For Example:
-* "play classical music" will search YouTube for Classical Music and open a relevant result in your web browser.
-* "search water bottles" will search Google for water bottles and open the search page in your browser.
-* "open mail" will open your web browser to Gmail
-* "who is napoleon" will search Wikipedia for Napoleon
+Commands Currently Supported:
+
+### Play on Youtube
+These commands will bring up a video for you to watch on YouTube in your web browser.
+
+* "play classical music"
+* "see 7 wonders of the world"
+* "hear bluejays calling"
+* "watch basketball highlights"
+* "visit madrid in the springtime"
+* "listen to famous american speeches"
+  
+### Play on Youtube
+Any of the following commands will bring up a video for you to watch on YouTube in your web browser.
+
+* Examples:
+  * "play classical music"
+  * "see 7 wonders of the world"
+  * "hear bluejays calling"
+  * "watch basketball highlights"
+  * "visit madrid in the springtime"
+  * "listen to famous american speeches"
+
 
 ## Shortcut
 

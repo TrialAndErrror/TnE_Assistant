@@ -2,16 +2,50 @@ import subprocess
 
 DEBUG_LOGGING_ENABLED = True
 
+OPEN_COMMANDS = [
+    'open',
+    'send'
+]
+
+EMAIL_COMMANDS = [
+    'mail',
+    'email',
+    'e-mail',
+    'message',
+    'messages'
+]
+
+OPEN_SETTINGS = {
+    'Commands': OPEN_COMMANDS,
+    'Mail URL': 'https://mail.google.com/mail/u/0/',
+    'Email': EMAIL_COMMANDS
+}
+
+PLAY_COMMANDS = [
+    'play',
+    'watch',
+    'hear',
+    'listen',
+    'see',
+    'visit'
+]
+
+PLAY_SETTINGS = {
+    'Commands': PLAY_COMMANDS,
+}
+
+WIKI_COMMANDS = [
+    'what',
+    'who',
+    'wiki',
+    'wikipedia'
+]
+
 WIKI_SETTINGS = {
-    'Commands':
-        [
-            'what',
-            'who',
-            'wiki',
-            'wikipedia'
-        ],
+    'Commands': WIKI_COMMANDS,
     'Lines to Read': 1
 }
+
 SEARCH_COMMANDS = [
     'look',
     'lookup',
@@ -19,9 +53,13 @@ SEARCH_COMMANDS = [
     'search',
     'google'
 ]
+SEARCH_SETTINGS = {
+    'Commands': SEARCH_COMMANDS
+}
+
 ASSISTANT_SETTINGS = {
     'Wake Word': 'Assistant',
-    'Mail URL': 'https://mail.google.com/mail/u/0/'
+    'Require Wake Word': False
 }
 
 
@@ -39,11 +77,11 @@ def print_custom_intro():
           'You can ask me to play or look up anything!\n'
           '\n'
           'You can Say:\n'
-          '\tSearch for Airline tickets to Florida\n'
+          '\tSearch Maps of Ancient Rome\n'
           '\tPlay Miley Cyrus - Born in the USA\n'
-          '\tWhat is Coronavirus?\n'
-          '\tLookup Medical Insurance Prices\n'
-          '\tPlay Anthony Fauci Speeches 2020\n'
+          '\tWho is Al Gore?\n'
+          '\tFind Car Rentals Near Me\n'
+          '\tPlay Chocolate Chip Cookie Recipe No Eggs'
           '\n'
           '\n'
           'Listening for commands...\n'
