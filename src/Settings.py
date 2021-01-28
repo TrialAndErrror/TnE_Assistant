@@ -47,10 +47,10 @@ WIKI_SETTINGS = {
 }
 
 SEARCH_COMMANDS = [
+    'search',
     'look',
     'lookup',
     'find',
-    'search',
     'google'
 ]
 SEARCH_SETTINGS = {

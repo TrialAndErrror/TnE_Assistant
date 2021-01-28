@@ -39,14 +39,14 @@ def run_assistant():
         perform_action(command_without_wake_word)
     else:
         if ASSISTANT_SETTINGS.get('Require Wake Word', False):
+            logging.error(f'Wake Word required by settings; action {command} will not be performed.')
+        else:
             """
             Here, the wake word is not required, so it will proceed to perform the action.
             This can be modified in the Settings file.
             """
             logging.info(f'Wake Word not required by settings; continuing to perform action')
             perform_action(command)
-        else:
-            logging.error(f'Wake Word required by settings; action {command} will not be performed.')
 
 
 def perform_action(command_action):
