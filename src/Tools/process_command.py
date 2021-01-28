@@ -1,8 +1,8 @@
 import logging
 import speech_recognition as sr
-from src.Settings import print_custom_intro
 
 from src import listener
+from src.Settings import print_custom_intro
 
 
 def cut_trigger_from_command(trigger, command):

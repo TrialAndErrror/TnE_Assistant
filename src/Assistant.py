@@ -1,14 +1,15 @@
 import logging
 
+from src.Settings import WIKI_SETTINGS, SEARCH_COMMANDS
+
 from src.Actions.Open import open_page_or_file
 from src.Actions.Play import play_youtube_video_for
 from src.Actions.Search import search_web_for
 from src.Actions.Wiki import open_wiki_results_for
-from src.Settings import print_custom_intro, WIKI_SETTINGS, SEARCH_COMMANDS
-from src.Tools.process_command import get_first_word_and_phrase_from, listen_for_commands
-from src.Tools.wake_triggers import check_for_trigger_command, set_trigger_command
 from src.Actions.Catchall import do_catchall_action
-from src.Tools.process_command import cut_trigger_from_command
+
+from src.Tools.process_command import get_first_word_and_phrase_from, listen_for_commands, cut_trigger_from_command
+from src.Tools.wake_triggers import check_for_trigger_command, set_trigger_command
 
 
 def run_assistant():
