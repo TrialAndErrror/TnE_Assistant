@@ -1,6 +1,6 @@
-from src.Assistant import listen_for_commands, speak
+from src.Assistant import listen_for_commands
 from src.Tools.search import search_web_for
-from src import SEARCH_COMMANDS
+from src import SEARCH_COMMANDS, speak
 from src.Tools.youtube import play_youtube_video_for
 from src.Tools.process_command import cut_trigger_from_command, get_trigger_word_from
 from src.Tools.open import open_page_or_file
