@@ -19,7 +19,8 @@ def open_wiki_url(phrase: str):
 
 def read_wiki_summary(phrase, lines_to_read):
     """
-    Read specific number of lines from
+    Read specific number of lines from the Summary of phrase on Wikipedia
+
     :param phrase: str
     :param lines_to_read: int
     :return: None
