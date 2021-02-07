@@ -3,9 +3,10 @@ import speech_recognition as sr
 
 from src import listener
 from src.Settings import print_custom_intro
+from .wake_triggers import get_trigger_command
 
 
-def cut_wake_word_from_command(trigger, command):
+def cut_wake_word_from_command(command):
     """
     Removes trigger from command using string split on the command string.
 
@@ -17,6 +18,7 @@ def cut_wake_word_from_command(trigger, command):
     :param command: str
     :return: str
     """
+    trigger = get_trigger_command()
     command_action = command.split(f' {trigger} ')[1].lower()
 
     logging.debug(f'Trigger command ({trigger}) removed from ({command})')

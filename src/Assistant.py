@@ -25,17 +25,16 @@ def run_assistant():
     command = listen_for_commands().lower()
 
     """
-    Wake Word comes from settings; Assistant checks the command to see if it has the wake word in it.
+    Assistant checks the command to see if it has the wake word in it.
     """
-    wake_word: str = ASSISTANT_SETTINGS.get('Wake Word')
-    wake_word_detected: bool = check_for_wake_word(wake_word, command)
+    wake_word_detected: bool = check_for_wake_word(command)
 
     """
     By default, Assistant will check if the wake_word is detected and log the outcome.
     This process happens inside the check_for_wake_word function above.
     """
     if wake_word_detected:
-        command_without_wake_word = cut_wake_word_from_command(wake_word, command)
+        command_without_wake_word = cut_wake_word_from_command(command)
         perform_action(command_without_wake_word)
     else:
         if ASSISTANT_SETTINGS.get('Require Wake Word', False):
@@ -52,7 +51,7 @@ def run_assistant():
 def perform_action(command_action):
     """
     Process command and perform the corresponding action.
-    This is the core decisionmaking process behind the Assistant.
+    This is the core decision-making process behind the Assistant.
 
     :param command_action: str
     :return: None
