@@ -2,6 +2,10 @@
 
 Trial and Errror Assistant is a voice-activated interface that allows you to quickly and efficiently access the information and media across the web.
 
+If you'd like a video overview of how it works, and how it compares to popular assistants on the market today, check out the "What is Amazon Alexa" video on our YouTube channel here: https://youtu.be/xQJ-3PbJoYY
+
+I also have a more in-depth explanation in the "What is Code" video, where I go over how the main function works in more detail: https://youtu.be/HYN_cM5vYZo
+
 ## Special Thanks
 
 Thank you to the following people for helping make this project possible:
