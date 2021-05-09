@@ -77,6 +77,17 @@ There are simple workarounds to make this Assistant work as an always-on listeni
 value your privacy and security and will gladly sacrifice small measures of functionality for large returns in terms of 
 privacy, security, and peace of mind.
 
+# Installation Instructions
+
+1. Download this code to your machine
+2. Install required packages to your system
+   * PortAudio: sudo apt-get install portaudio19-dev
+   * eSpeak: sudo apt-get install espeak
+  
+3. Create a virtual environment from the requirements.txt
+4. Run main.py to start listening for commands
+
+
 # Help! It doesn't work!
 So you downloaded the repository and ran main.py using python3, and it didn't work. Either it flashes on screen,
 or it just doesn't show up. That's OK! The joy of open source software is that we can work together on this.
@@ -88,10 +99,11 @@ went smoothly.
 
 One common issue comes with installing PyAudio; if you don't have PortAudio installed on your machine, the PyAudio
 installation will fail. To resolve it:
-* On Ubuntu, you can get it from the package manager: sudo apt-get install portaudio19-dev python-pyaudio
-* On Linux/Windows/Mac systems, you can manually download and install it here: http://files.portaudio.com/download.html
-
-
+* On Ubuntu, you can get it from the package manager:
+   * sudo apt-get install portaudio19-dev
+* On Linux/Windows/Mac systems, you can manually download and install it from the PortAudio page: 
+  * http://files.portaudio.com/download.html
+    
 If you are having trouble with espeak, it can also be helpful to install espeak through your package manager or
 from the [PyPI page](https://pypi.org/project/python-espeak/) for python espeak.
 

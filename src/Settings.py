@@ -1,4 +1,4 @@
-import subprocess
+import os
 
 DEBUG_LOGGING_ENABLED = True
 
@@ -69,8 +69,14 @@ def print_custom_intro():
     :return: None
     """
 
-    subprocess.call('clear', shell=True)
+    # for windows
+    if os.name == 'nt':
+        os.system('cls')
 
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        os.system('clear')
+    print('\n'*100)
     print('Welcome to Ratty\'s Assistant\n'
           '\n'
           'You can ask me to play or look up anything!\n'
