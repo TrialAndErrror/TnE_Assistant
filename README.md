@@ -99,8 +99,12 @@ One common issue comes with installing PyAudio; if you don't have PortAudio inst
 installation will fail. To resolve it:
 * On Ubuntu, you can get it from the package manager:
    * sudo apt-get install portaudio19-dev
-* On Windows, if you get an error about Visual C++ Build Tools, you can download those here:
-  * https://visualstudio.microsoft.com/visual-cpp-build-tools/
+    
+* On Windows, the steps to install PortAudio are as follows:
+    * Download Visual C++ Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+    * Install the PipWin package in your virtual environment: pip install pipwin
+    * Use PipWin to install PyAudio: pipwin install pyaudio
+    
 * Alternatively, you can manually download and install PortAudio from the PortAudio page: 
   * http://files.portaudio.com/download.html
     
