@@ -11,7 +11,7 @@ I also have a more in-depth explanation in the "What is Code" video, where I go 
 Thank you to the following people for helping make this project possible:
 * [RajMa](https://pypi.org/user/RajMa/), creator of [PyWhatKit](https://pypi.org/project/pywhatkit/), for providing multiple tools that help enable the Assistant's actions;
 * [Natesh M. Bhat](https://pypi.org/user/nateshmbhat/), creator of [Python Text to Speech 3](https://pypi.org/project/pyttsx3/), for providing a simple and clean text-to-speech tool;
-* [Anthony Zhang](https://pypi.org/user/Anthony.Zhang/), creator of [SpeechRecognition](https://pypi.org/project/SpeechRecognition/), for providing an easy to use voice recognition tool;
+* [Anthony Zhang](https://pypi.org/user/Anthony.Zhang/), creator of [SpeechRecognition](https://pypi.org/project/SpeechRecognition/), for providing an easy-to-use voice recognition tool;
 * and [Programming Hero](https://www.youtube.com/channel/UCStj-ORBZ7TGK1FwtGAUgbQ), for the comprehensive and entertaining [video tutorial](https://www.youtube.com/watch?v=AWvsXxDtEkU) on how to make the underlying libraries work together. If you're interested in this Assistant and how to develop your own, I highly recommend starting with his video to get a great overview of the process!
 
 ## Usage
@@ -39,7 +39,6 @@ These commands will search Google for the information you requested.
 * "google how to repair a cracked screen"
 * "find where Albert Einstein went to college"
 
-
 ### Search on Wikipedia
 These commands will search Wikipedia for the person, place, or thing you want to learn more about. Great for 20 questions!
 * "what is Prussia"
@@ -55,7 +54,6 @@ For now, you can use it to open your web browser to your e-mail to quickly check
 * "open messages"
 * "send e-mail"
 
-
 ## Customization
 Assistant was built around making your life easier and simplifying common tasks. In order to achieve that goal,
 the Settings.py file in src can be modified to your liking. You will see lists of commands for each of the actions
@@ -67,15 +65,15 @@ even when a wake word is not detected. This functionality can be disabled in the
 ### Shortcut
 Along the lines of customization, there is a template bash file called 'assistant.sh' included in src/bash/.
 This script can be run in a bash terminal to start the assistant directly, 
-as long as the user enters the absolute filepath to the script. I included this template because it's a quick way
+as long as the user enters the absolute filepath to the script. I included this template because it's a simple way
 to integrate with keyboard shortcuts and allow you to quickly bring up Assistant.
 
 NOTE: By default, the Assistant script must be run every time you want to make a new request.
-There is no "always-on" functionality on Assistant. I chose this because I personally do not need a device that
-is always listening to me, and I'd much rather have one where I can press a button and tell it to listen.
-There are simple workarounds to make this Assistant work as an always-on listening device, we here at Trial and Errror
-value your privacy and security and will gladly sacrifice small measures of functionality for large returns in terms of 
-privacy, security, and peace of mind.
+There is no "always-on" functionality on Assistant. I chose this because it is much safer and more secure to have an
+assistant that runs when you press a button and tell it to listen, rather than be always listening.
+
+We here at Trial and Errror value your privacy and security and have chosen to sacrifice small measures of functionality 
+for large returns in terms of privacy, security, and peace of mind.
 
 # Installation Instructions
 
@@ -101,11 +99,13 @@ One common issue comes with installing PyAudio; if you don't have PortAudio inst
 installation will fail. To resolve it:
 * On Ubuntu, you can get it from the package manager:
    * sudo apt-get install portaudio19-dev
-* On Linux/Windows/Mac systems, you can manually download and install it from the PortAudio page: 
+* On Windows, if you get an error about Visual C++ Build Tools, you can download those here:
+  * https://visualstudio.microsoft.com/visual-cpp-build-tools/
+* Alternatively, you can manually download and install PortAudio from the PortAudio page: 
   * http://files.portaudio.com/download.html
     
 If you are having trouble with espeak, it can also be helpful to install espeak through your package manager or
 from the [PyPI page](https://pypi.org/project/python-espeak/) for python espeak.
 
-If those don't work, feel free to reach out to me directly and we can try and work through the issue! If you share
+If those don't work, feel free to reach out to me directly, and we can try and work through the issue! If you share
 the issue with me, I can update this readme with more helpful instructions to help solve further issues
