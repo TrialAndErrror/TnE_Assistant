@@ -86,8 +86,14 @@ First, let's make sure that python is able to access all of the libraries and fi
 Start by installing from the requirements.txt (pip3 install -r requirements.txt) and make sure all of those installations
 went smoothly.
 
+One common issue comes with installing PyAudio; if you don't have PortAudio installed on your machine, the PyAudio
+installation will fail. To resolve it:
+* On Ubuntu, you can get it from the package manager: sudo apt-get install portaudio19-dev python-pyaudio
+* On Linux/Windows/Mac systems, you can manually download and install it here: http://files.portaudio.com/download.html
+
+
 If you are having trouble with espeak, it can also be helpful to install espeak through your package manager or
 from the [PyPI page](https://pypi.org/project/python-espeak/) for python espeak.
 
-If that doesn't work, feel free to reach out to me directly and we can try and work through the issue! If you share
+If those don't work, feel free to reach out to me directly and we can try and work through the issue! If you share
 the issue with me, I can update this readme with more helpful instructions to help solve further issues
