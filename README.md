@@ -82,6 +82,7 @@ for large returns in terms of privacy, security, and peace of mind.
     * On Ubuntu:
         * PortAudio: sudo apt-get install portaudio19-dev
         * eSpeak: sudo apt-get install espeak
+        * tkinter: sudo apt-get install python3-tk python3-dev
     * On Windows:
         * Download Visual C++ Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
         * Install the PipWin package in your virtual environment: pip install pipwin
@@ -115,6 +116,9 @@ installation will fail. To resolve it:
     
 If you are having trouble with espeak, it can also be helpful to install espeak through your package manager or
 from the [PyPI page](https://pypi.org/project/python-espeak/) for python espeak.
+
+Finally, it is important to have tkinter to use the MouseInfo package. On Ubuntu, you can run this command:
+    * sudo apt-get install python3-tk python3-dev
 
 If those don't work, feel free to reach out to me directly, and we can try and work through the issue! If you share
 the issue with me, I can update this readme with more helpful instructions to help solve further issues
