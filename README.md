@@ -78,9 +78,14 @@ for large returns in terms of privacy, security, and peace of mind.
 # Installation Instructions
 
 1. Download this code to your machine
-2. Install required packages to your system
-   * PortAudio: sudo apt-get install portaudio19-dev
-   * eSpeak: sudo apt-get install espeak
+2. Install required packages to your system:
+    * On Ubuntu:
+        * PortAudio: sudo apt-get install portaudio19-dev
+        * eSpeak: sudo apt-get install espeak
+    * On Windows:
+        * Download Visual C++ Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+        * Install the PipWin package in your virtual environment: pip install pipwin
+        * Use PipWin to install PyAudio: pipwin install pyaudio
   
 3. Create a virtual environment from the requirements.txt
 4. Run main.py to start listening for commands
